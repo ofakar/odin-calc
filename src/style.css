@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+ :root {
+    --text-color: #eee;
+    --bg-color: #223;
+    --button-bg-color: #112;
+    --display-bg-color: #1a1a1a;
+    --focus-bg-color: #334;
+    --active-bg-color: #445;
+    --border-color: #445;
+    --accent-color: #4d9aff;
+  }
+
+* {
+  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@media (prefers-color-scheme: light) {
+   :root {
+    --text-color: #112;
+    --bg-color: #ddddde;
+    --button-bg-color: #f7f7f7;
+    --display-bg-color: #fff;
+    --focus-bg-color: #e7e7e7;
+    --active-bg-color: #ddd;
+    --border-color: #ddd;
+    --accent-color: #0066cc;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-family: system-ui, "Helvetica Neue", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 3rem;
+}
+
+#calculator {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  min-width: 403px;
+}
+
+#display {
+  font-family: 'Fira Code', monospace;
+  width: 100%;
+  min-height: 120px;
+  cursor: default;
+  padding: 10px;
+  font-size: 2rem;
+  text-align: right;
+  background-color: var(--display-bg-color, #fff);
+  color: var(--text-color);
+  border: none;
+}
+
+#keys { 
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 100px);
+  gap: 1px;
+  grid-template-areas: 
+    "clear divide multiply subtract"
+    "seven eight nine plus"
+    "four five six plus"
+    "one two three equals"
+    "zero zero dot equals";
+}
+
+.display { grid-area: display; }
+.clear { grid-area: clear; }
+.divide { grid-area: divide; }
+.multiply { grid-area: multiply; }
+.subtract { grid-area: subtract; }
+.seven { grid-area: seven; }
+.eight { grid-area: eight; }
+.nine { grid-area: nine; }
+.four { grid-area: four; }
+.five { grid-area: five; }
+.six { grid-area: six; }
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
+.plus { grid-area: plus; }
+/* .negate { grid-area: negate; } */
+.zero { grid-area: zero; }
+.dot { grid-area: dot; }
+.equals { grid-area: equals; }
+
+#keys > button {
+  font: inherit;
+  font-size: 2rem;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  color: var(--text-color);
+  background-color: var(--button-bg-color, #f0f0f0);
+  transition: background-color .1s ease-in-out;
+}
+
+#keys > button:hover {
+  background-color: var(--focus-bg-color);
+}
+
+#keys > button:active {
+  background-color: var(--active-bg-color);
+}
