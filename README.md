@@ -2,9 +2,6 @@
 
 A modern, responsive calculator application built with React and Vite. It supports standard arithmetic operations, decimal input, keyboard navigation, and adapts to system light/dark mode preferences.
 
-<!-- ![Calculator Screenshot Placeholder](./public/screenshot_placeholder.png)
-_(Replace `./public/screenshot_placeholder.png` with an actual screenshot of your calculator. You can name it `screenshot.png` and place it in the `public` folder, then update the path here.)_ -->
-
 ## Table of Contents
 
 - [Features](#features)
@@ -38,10 +35,6 @@ _(Replace `./public/screenshot_placeholder.png` with an actual screenshot of you
 
 ## Live Demo
 
-**(Optional: Add a link to your deployed application here if you host it on services like Netlify, Vercel, or GitHub Pages.)**
-
-Example: `[Live Demo](https://your-calculator-app.netlify.app)`
-
 ## Tech Stack
 
 - **Frontend:**
@@ -54,3 +47,57 @@ Example: `[Live Demo](https://your-calculator-app.netlify.app)`
 - **Build Tool:** Vite
 
 ## Project Structure
+
+react-calculator/
+├── public/
+│ └── favicon192.png # Favicon
+│ └── (screenshot.png) # Add your screenshot here
+├── src/
+│ ├── App.jsx # Main React component with calculator logic and JSX
+│ ├── main.jsx # Entry point for the React application
+│ └── style.css # Global CSS styles
+├── .gitignore # Specifies intentionally untracked files that Git should ignore
+├── index.html # Vite's main HTML file (entry point)
+├── package.json # Project metadata, dependencies, and scripts
+├── README.md # This file
+└── vite.config.js # Vite configuration file
+
+## Usage
+
+### Mouse Input
+
+-   Click the digit buttons (0-9) to input numbers.
+-   Click the operator buttons (+, -, \*, /) to select an operation.
+-   Click the `.` button to input a decimal point.
+-   Click the `=` button to evaluate the expression.
+-   Click the `C` button to clear the display and reset the calculation.
+
+### Keyboard Input
+
+The calculator also supports keyboard input for a faster experience:
+
+-   **Numbers:** `0` `1` `2` `3` `4` `5` `6` `7` `8` `9`
+-   **Operators:**
+    -   `+` (Addition)
+    -   `-` (Subtraction)
+    -   `*` (Multiplication)
+    -   `/` (Division)
+-   **Decimal:** `.`
+-   **Equals/Evaluate:** `Enter` or `=`
+-   **Clear:** `Escape` or `c` / `C`
+-   **Backspace:** `Backspace` (Currently clears the entire display. For character-by-character deletion, this would need to be enhanced.)
+-   **Numpad:** Numpad keys for digits and operators (`Numpad0`-`Numpad9`, `NumpadAdd`, `NumpadSubtract`, `NumpadMultiply`, `NumpadDivide`, `NumpadDecimal`) are also supported.
+
+## To-Do / Future Enhancements (Optional)
+
+*(You can list potential future features or improvements here)*
+- [ ] Implement character-by-character backspace functionality.
+- [ ] Add more advanced mathematical functions (e.g., square root, percentage).
+- [ ] Memory functions (M+, M-, MR, MC).
+- [ ] History of calculations.
+- [ ] Unit tests for calculation logic.
+- [ ] Theming options beyond system preference.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE.md` file for details.
